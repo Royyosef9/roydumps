@@ -1,0 +1,13 @@
+# שימוש בתמונה הרשמית של PostgreSQL
+FROM postgres:15
+
+# הגדרת משתני סביבה (ניתן לעקוף ב-docker-compose)
+ENV POSTGRES_USER=royyo
+ENV POSTGRES_PASSWORD=12345!!
+ENV POSTGRES_DB=my_database
+
+# העתקת סקריפט SQL ליצירת טבלאות והכנסת נתונים ראשוניים
+COPY init.sql /docker-entrypoint-initdb.d/
+
+# חשיפת פורט 5432 (ברירת מחדל של PostgreSQL)
+EXPOSE 5432
