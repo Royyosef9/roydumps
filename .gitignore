@@ -3,19 +3,28 @@ backend/.env.prod
 backend/dockerfile.prod
 backend/prod-requirements.txt
 docker-compose.prod.yml
+backend/prod-*
 
 # ❌ קבצים רגישים של הסביבה המקומית
 backend/.env
 frontend/.env
 db/.env
+.env
 
 # ❌ קבצים זמניים שלא צריך בגיט
 __pycache__/
+backend/__pycache__/
 *.pyc
 *.pyo
 *.log
 *.sqlite3
 *.db
+*.pid
+*.swp
+*.swo
+*.bak
+*.cache
+nohup.out
 
 # ❌ קבצים של Editor
 .vscode/
@@ -23,16 +32,18 @@ __pycache__/
 .DS_Store
 
 # ❌ Node.js קבצים מיותרים
-frontend/node_modules
-frontend/.next
-frontend/.cache
+frontend/node_modules/
+frontend/.next/
+frontend/.cache/
+__snapshots__/
 
 # ❌ קבצים של Docker שלא רוצים שיעברו
-*.pid
 backend/.dockerignore
 docker-compose.override.yml
-# ❌ קבצי לוגים, cache וקבצים זמניים
+
+# ❌ קבצי לוגים ותיקיות לוגים
 logs/
-*.swp
-*.swo
-*.bak
+backend/logs/
+debug.log
+access.log
+*.log
