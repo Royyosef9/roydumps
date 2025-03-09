@@ -1,0 +1,26 @@
+-r requirements.txt  # טוען את כל חבילות הפרודקשן
+
+# Testing & Debugging
+pytest==8.0.2
+pytest-cov==4.1.0
+pytest-django==4.5.2
+django-debug-toolbar==4.2.0
+
+# Code Quality & Style
+flake8==7.0.0
+black==24.2.0
+isort==5.12.0
+mypy==1.8.0
+
+# Pre-commit Hooks
+pre-commit==3.6.0
+
+# Documentation
+sphinx==7.2.6
+sphinx-rtd-theme==1.2.0
+mkdocs==1.5.3
+mkdocs-material==9.5.0
+
+# DevOps & Observability
+watchdog==3.0.0
+docker==5.0.3  # מאפשר לנהל קונטיינרים מתוך קוד Python

@@ -1,0 +1,21 @@
+# שימוש בבסיס Python 3.11
+FROM python:3.11
+
+# הגדרת משתנה סביבתי כדי שה-stdout לא ישמר בזיכרון
+ENV PYTHONUNBUFFERED=1
+
+# יצירת תיקיית עבודה
+WORKDIR /app
+
+# התקנת תלויות בצורה נפרדת כדי לא להעתיק את כל הקוד כל פעם מחדש
+COPY requirements.txt requirements-dev.txt ./
+RUN pip install --no-cache-dir -r requirements.txt && pip install --no-cache-dir -r requirements-dev.txt
+
+# העתקת כל הקבצים (בפיתוח יש Volume, אבל זה נדרש לאתחול)
+COPY . .
+
+# פתיחת פורט Flask
+EXPOSE 5000
+
+# הרצת Flask עם Auto-reload
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000"]
