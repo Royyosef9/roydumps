@@ -1,4 +1,39 @@
-docker-compose.dev.yml
+# ❌ קבצי פיתוח - לא רוצים ב-Production
 backend/.env.dev
 backend/dockerfile.dev
 backend/dev-requirements.txt
+docker-compose.dev.yml
+
+# ❌ קבצים רגישים - אסור לעלות ל-Git
+backend/.env
+frontend/.env
+db/.env
+
+# ❌ קבצים זמניים שלא צריך בגיט
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.sqlite3
+*.db
+
+# ❌ קבצים של Editor
+.vscode/
+.idea/
+.DS_Store
+
+# ❌ Node.js קבצים מיותרים
+frontend/node_modules/
+frontend/.next/
+frontend/.cache/
+
+# ❌ קבצי Docker שלא רוצים שיעברו
+*.pid
+backend/.dockerignore
+docker-compose.override.yml
+
+# ❌ קבצי לוגים, cache וקבצים זמניים
+logs/
+*.swp
+*.swo
+*.bak
