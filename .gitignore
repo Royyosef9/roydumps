@@ -9,7 +9,7 @@ env/
 venv/
 ENV/
 .venv/
-.env/
+.env
 
 # VSCode / PyCharm
 .vscode/
