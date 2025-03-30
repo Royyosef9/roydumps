@@ -27,5 +27,9 @@ def secret():
     api_key = os.getenv("API_KEY", "🚫 Not Set")
     return f"🔐 Your API Key is: {api_key}"
 
+@app.route("/dev-check")
+def dev_check():
+    return "בדיקה מהסניף dev!"
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
