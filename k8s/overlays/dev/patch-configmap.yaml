@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: royapp-config
 data:
-  USERNAME: "RoyDevLocal"
+  APP_GREETING: "(טל הוא חזה עוף)שלום מ-DEV של רואי"
+  USERNAME: RoyDevLocal

@@ -4,7 +4,6 @@ kind: ConfigMap
 metadata:
   name: royapp-config
 data:
-  APP_GREETING: " שלום למיניקיוב רואי"
   USERNAME: "Roybase"
   REDIS_HOST: redis
   REDIS_PORT: "6379"

@@ -1,0 +1,29 @@
+replicaCount: 3
+
+image:
+  repository: roy-app
+  tag: v1
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 5000
+
+redis:
+  enabled: true
+  host: redis
+  port: 6379
+
+config:
+  customMessage: "Hello from PROD!"
+
+secret:
+  key: "supersecretprod"
+
+env:
+  flaskEnv: production
+  debug: false
+
+ingress:
+  enabled: true
+  host: flask.mydomain.com
