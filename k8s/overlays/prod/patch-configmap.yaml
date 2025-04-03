@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: royapp-config
-data:
-  USERNAME: "RoyProd"
-  APP_GREETING: "(טל הוא חזה עוף)שלום מפרודקשן של רואי"

@@ -7,6 +7,8 @@ app = Flask(__name__)
 REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
 REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
 REDIS_PASSWORD = os.getenv("REDIS_PASSWORD", None)
+secret_key = os.getenv("SECRET_KEY", "fallback-secret")
+custom_message = os.getenv("CUSTOM_MESSAGE", "Hello World")
 
 r = redis.Redis(host=REDIS_HOST, port=REDIS_PORT, password=REDIS_PASSWORD, decode_responses=True)
 
